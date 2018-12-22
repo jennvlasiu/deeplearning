@@ -1,2 +1,2 @@
 # deeplearning
-Geotab neural network design for MMAI 894
+Neural network design for MMAI 894
