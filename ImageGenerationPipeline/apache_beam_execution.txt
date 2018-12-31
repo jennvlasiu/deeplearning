@@ -1,0 +1,12 @@
+# Runs the Apache Beam Pipeline in Google Dataflow (with 500 workers)
+  
+  !python generate_vehicle_place_image.py \
+    --project 'geotab-bi' \
+    --job_name 'industry-image-generator' \
+    --setup_file './setup.py' \
+    --runner 'DataflowRunner' \
+    --output_images 'industryclassification:ImageFeatures.VehicleIndustryPlaceImages' \
+    --temp_location 'gs://geotab-bi-eu/temp' \
+    --staging_location 'gs://geotab-bi-eu/staging' \
+    --max_num_workers '500' \
+    --save_main_session 'True' \
