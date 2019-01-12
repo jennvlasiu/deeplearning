@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: industry-cls-trainer
+Version: 0.1
+Summary: Geotab Industry Classifier
+Home-page: UNKNOWN
+Author: Geotab
+Author-email: mikebranch@geotab.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
