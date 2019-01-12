@@ -1,0 +1,13 @@
+gcloud ml-engine jobs submit training industry_classifier122 ^
+--module-name=trainer.task ^
+--region=europe-west1 ^
+--config=C:\Users\mike\Documents\Personal\MMAI894\config-hyp2.yaml ^
+--package-path=./trainer ^
+--job-dir=gs://geotab-bi-eu/industry-classifier/trainer/output_dir37 ^
+-- ^
+--validation_size=0.2 ^
+--num_records=10000 ^
+--output_dir=gs://geotab-bi-eu/industry-classifier/trainer/output_dir37 ^
+--conv_stride=1 ^
+--max_pool_ksize=2 ^
+--max_pool_stride=2

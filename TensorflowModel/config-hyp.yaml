@@ -1,0 +1,89 @@
+trainingInput:
+  scaleTier: CUSTOM
+  masterType: complex_model_m_gpu
+  runtimeVersion: '1.10'
+  pythonVersion: '3.5'
+  hyperparameters:
+      maxTrials: 40
+      maxParallelTrials: 5
+      enableTrialEarlyStopping: True
+      goal: MINIMIZE    
+      hyperparameterMetricTag: loss
+      params:
+      - parameterName: train_batch_size
+        type: DISCRETE
+        discreteValues:
+        - 20
+        - 30
+        - 40
+        - 50
+      - parameterName: dropout_rate
+        type: DOUBLE
+        minValue: 0.02
+        maxValue: 0.5
+        scaleType: UNIT_LOG_SCALE
+      - parameterName: learning_rate
+        type: DOUBLE
+        minValue: 0.0001
+        maxValue: 0.1
+        scaleType: UNIT_LOG_SCALE
+      - parameterName: ksize1
+        type: INTEGER
+        minValue: 2
+        maxValue: 5
+        scaleType: UNIT_LINEAR_SCALE
+      - parameterName: ksize2
+        type: INTEGER
+        minValue: 2
+        maxValue: 5
+        scaleType: UNIT_LINEAR_SCALE
+      - parameterName: ksize3
+        type: INTEGER
+        minValue: 2
+        maxValue: 5
+        scaleType: UNIT_LINEAR_SCALE
+      - parameterName: fc_layer_size
+        type: DISCRETE
+        discreteValues:
+        - 64
+        - 128
+        - 256
+      - parameterName: nfil1
+        type: DISCRETE
+        discreteValues:
+        - 16
+        - 32
+        - 64
+      - parameterName: nfil2
+        type: DISCRETE
+        discreteValues:
+        - 16
+        - 32
+        - 64
+      - parameterName: nfil3
+        type: DISCRETE
+        discreteValues:
+        - 16
+        - 32
+        - 64
+      - parameterName: conv_stride
+        type: DISCRETE
+        discreteValues:
+        - 1
+        - 2
+        - 3
+      - parameterName: max_pool_ksize
+        type: DISCRETE
+        discreteValues:
+        - 2
+        - 3
+        - 4
+      - parameterName: max_pool_stride
+        type: DISCRETE
+        discreteValues:
+        - 2
+        - 3
+        - 4
+  
+  
+  
